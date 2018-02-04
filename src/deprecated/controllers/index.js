@@ -69,7 +69,7 @@ function _validateDrawerProps(layout) {
       })
     }
     else if (drawerProps.type === "TheSideBar") {
-      [Constants.THE_SIDEBAR_AIRBNB, Constants.THE_SIDEBAR_FACEBOOK, Constants.THE_SIDEBAR_LUVOCRACY, Constants.THE_SIDEBAR_WUNDER_LIST].forEach(function(type) {
+      [Constants.THE_SIDEBAR_AIRBNB, Constants.THE_SIDEBAR_FACEBOOK, Constants.THE_SIDEBAR_LUVOCRACY, Constants.THE_SIDEBAR_WUNDER_LIST, Constants.THE_SIDEBAR_FEEDLY].forEach(function(type) {
         if (type === drawerProps.animationType){
           shouldSetToDefault = false;
         }

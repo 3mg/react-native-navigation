@@ -280,7 +280,18 @@ RCT_EXPORT_METHOD(
      {
          // set the new controller as the root
          appDelegate.window.rootViewController = controller;
-         [appDelegate.window makeKeyAndVisible];
+         [appDelegate.window addSubview:controller.view];
+         
+         if ([controller isKindOfClass:[RCCTheSideBarManagerViewController class]]) {
+             RCCTheSideBarManagerViewController *drawerController = (RCCTheSideBarManagerViewController*) controller;
+             
+             //drawerController.storyboardsUseAutoLayout = YES;
+             //drawerController.view.translatesAutoresizingMaskIntoConstraints = YES;
+             
+             [appDelegate.window addSubview:drawerController.view]; // THIS!
+             [appDelegate.window makeKeyAndVisible];
+         }
+         
          [presentedViewController dismissViewControllerAnimated:NO completion:nil];
          
          if (animated)

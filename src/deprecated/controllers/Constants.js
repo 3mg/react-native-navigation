@@ -8,3 +8,4 @@ export const THE_SIDEBAR_AIRBNB = 'airbnb';
 export const THE_SIDEBAR_FACEBOOK = 'facebook';
 export const THE_SIDEBAR_LUVOCRACY = 'luvocracy';
 export const THE_SIDEBAR_WUNDER_LIST = 'wunder-list';
+export const THE_SIDEBAR_FEEDLY = 'feedly';
